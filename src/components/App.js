@@ -1,5 +1,5 @@
 import React from 'react';
-import ElephantList from './ElephantList';
+import {ElephantList} from './ElephantList';
 
 function App() {
   return (
