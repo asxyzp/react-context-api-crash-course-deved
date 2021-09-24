@@ -10,7 +10,9 @@ import {ElephantContext} from "./App";
  */
 const ElephantList = () => {
     const contextVal = useContext(ElephantContext);     //USING ElephantContext IN App COMPONENT
-    const searchList = contextVal[1][0];                //
+    const searchList = contextVal[1][0];                //GETTING searchList FOR RENDERING THE ARRAY OF <Elephant/> COMPONENTS
+    
+    //<ElephantList/> COMPONENT
     return (
         <>
             {

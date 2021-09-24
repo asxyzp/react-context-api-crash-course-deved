@@ -43,9 +43,11 @@ const SearchBar = () => {
             setSearchList(elephantList.map(elephant=>{return elephant}))
         }
     };
+
+    //<SearchBar/> COMPONENT
     return (
         <><input type="text" value={searchValue} onChange={filterSearchValue} className="w-75 form-control fs-3 position-relative on-top d-block mx-auto" placeholder="Search 🐘"></input></>
-    )
+    );
 }
 
 export default SearchBar;
