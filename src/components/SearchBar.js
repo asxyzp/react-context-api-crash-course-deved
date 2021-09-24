@@ -5,7 +5,6 @@ const SearchBar = () => {
 
     const [searchValue, setSearchValue] = useState(""); //SEARCH VALUE STATE & IT'S CHANGE FUNCTIOn
     const contextVal = useContext(ElephantContext);     //ACCESSING CONTEXT VALUE PASSED FROM THE CONTEXT PROVIDER
-    const searchList = contextVal[1][0];                //SEARCH LIST IS THE LIST WHOSE VALUE WILL BE CHANGED BASED ON FILTERED OUTPUT
     const elephantList = contextVal[0][0];              //ELEPHANT LIST IS CONTAINS INITIAL DATA
     const setSearchList = contextVal[1][1];             //FUNCTION FOR CHANGING STATE OF SEARCH LIST
     
@@ -16,7 +15,7 @@ const SearchBar = () => {
      * @return : UNDEFINED
      */
     const filterSearchValue = (event) =>{
-        const searchValue = event.target.value;                 //VALUE WHICH WILL BE SEARCHED
+        let searchValue = event.target.value;                 //VALUE WHICH WILL BE SEARCHED
         setSearchValue(searchValue);                            //CHANGING SEARCH VALUE STATE
         if(searchValue.length>0){                               //WHEN SEARCH VALUE LENGTH IS >0
             
